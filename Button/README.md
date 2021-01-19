@@ -24,7 +24,7 @@ Do Button là 1 View kế thừa TextView nên Button cũng có thừa hưởng 
 
 ## Bắt sự kiện click
 
-Mỗi View đều có thể bắt sự kiện click và long click, Button cũng như vậy (vì mục đích sinh ra của nó là để click mà ) bằng cách sử dụng phương thước `setOnClickListener` và tham số là 1 interface `OnClickListener`
+Mỗi View đều có thể bắt sự kiện click và long click, Button cũng như vậy (vì mục đích sinh ra của nó là để click mà ) bằng cách sử dụng phương thước `setOnClickListener` và tham số là 1 đối tượng khai triển interface `OnClickListener`
 
 ```java
 Button btnLogin = findViewById(R.id.btnLogin);
