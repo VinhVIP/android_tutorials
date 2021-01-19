@@ -87,7 +87,7 @@ VD: Thiết lập màu highlight là đỏ
 android:textColorHighlight="#ff0000"
 ```
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/EditText/ed_highlight2.png?raw=true)
 
 
 ## 5, Bắt sự kiện nội dung EditText thay đổi
@@ -135,7 +135,7 @@ edText.addTextChangedListener(new TextWatcher() {
 });
 ```
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/EditText/ed_textwatcher2.png?raw=true)
 
 # TextInputLayout và TextInputEditText
 
@@ -208,7 +208,7 @@ VD:
 
 `app:passwordToggleEnabled="true"` thiết lập cho phép ẩn/hiện password thông qua icon con mắt mặc định.
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/EditText/ed_textinput2.png?raw=true)
 
 
 Để thiết lập thông báo lỗi, ta sử dụng phương thức `setError(String mess)` của `TextInputLayout`. Nếu `mess` là null thì nghĩa là không có lỗi gì cả
@@ -239,4 +239,4 @@ VD:
         });
 ```
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/EditText/ed_error2.png?raw=true)
