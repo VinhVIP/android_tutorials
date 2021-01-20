@@ -55,7 +55,7 @@ Trong đó:
 
 - `android:dashWidth` : độ dài nét đứt
 
-![stroke]()
+![stroke](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/stroke.png)
 
 ### Thiết lập tô màu với solid hoặc gradient
 
@@ -66,6 +66,7 @@ Phần tử **solid** dùng để thiết lập 1 màu nền.
 	android:color="#ff0000" />
 ```
 
+![solid](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/solid.png)
 
 Phần tử **gradient** dùng tô màu theo gradient - sinh ra bằng cách biến đổi màu liên tục thông qua 3 màu được thiết lập bằng 3 thuộc tính `startColor`, `centerColor`, `endColor`.
 
@@ -82,7 +83,7 @@ VD:
     android:endColor="#FFEB3B" />
 ```
 
-![default]()
+![default](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/gradient_default.png)
 
 VD: angle có giá trị là 45, lưu ý giá trị angle phải bội số của 45
 
@@ -93,7 +94,7 @@ VD: angle có giá trị là 45, lưu ý giá trị angle phải bội số củ
     android:endColor="#FFEB3B" />
 ```
 
-![angle 45]()
+![angle 45](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/gradient_angle_45.png)
 
 VD: Kiểu biến đổi là `sweep` - vẽ theo chiều kim đồng hồ xung quanh tâm
 
@@ -104,7 +105,7 @@ VD: Kiểu biến đổi là `sweep` - vẽ theo chiều kim đồng hồ xung q
 	android:type="sweep" />
 ```
 
-![sweep]()
+![sweep](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/gradient_sweep.png)
 
 Sử dụng kiểu biến đổi `radial` cần thiết lập bán kính của vùng tô bằng thuộc tính `android:gradientRadius`
 
@@ -123,7 +124,7 @@ Mặc định tâm của hình tròn là ở chính giữa
 </shape>
 ```
 
-![radial]()
+![radial](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/radial.png)
 
 Để thay đổi tâm hình tròn vẽ, ta thiết lập 2 thuộc tính là `android:centerX` và `android:centerY` nhận giá trị từ **0** đến **1** , ví dụ ở giữa là **0.5**
 
@@ -140,7 +141,7 @@ Mặc định tâm của hình tròn là ở chính giữa
 </shape>
 ```
 
-![radial centerXY]()
+![radial centerXY](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/radial_centerXY.png)
 
 
 ### Thiết lập kích thước vẽ với <size>
@@ -184,4 +185,4 @@ Hoặc thiết lập bo tròn cho từng góc với `android:topLeftRadius`, `an
 </shape>
 ```
 
-![corner]()
+![corner](https://github.com/VinhVIP/android_tutorials/blob/main/Drawable%20-%20Shape/corner.png)
