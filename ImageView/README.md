@@ -12,11 +12,15 @@ ImageView là một View dùng để hiển thị hình ảnh.
     android:src="@mipmap/ic_launcher" />
 ```
 
+![intro](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/img_intro.png)
+
 `android:src` dùng để thiết lập hình ảnh hiển thị cho ImageView. Hình ảnh có thể là 1 bitmap, file hình ảnh, drawable.
 
 VD: Thêm vào `drawable` một file hình ảnh là `facebook.png`
 
-![fb drawable]()
+![fb icon](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/facebook.png)
+
+![fb drawable](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/db_drawable.png)
 
 Sử dụng phương thước `setImageResource` để thiết lập hình ảnh cho ImageView
 
@@ -27,6 +31,8 @@ imgView.setImageResource(R.drawable.facebook);
 // hoặc
 imgView.setImageDrawable(getDrawable(R.drawable.facebook));
 ```
+
+![](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/img_fb.png)
 
 ## Thay đổi tỉ lệ và vị trí hiển thị
 
@@ -57,4 +63,4 @@ VD:
 	android:src="@drawable/facebook" />
 ```
 
-![image adjust bounds]()
+![image adjust bounds](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/adjust.png)
