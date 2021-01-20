@@ -12,6 +12,12 @@ ImageView là một View dùng để hiển thị hình ảnh.
     android:src="@mipmap/ic_launcher" />
 ```
 
+*Lấy ImageView bằng Java*
+
+```java
+ImgeView imgView = findViewById(R.id.imgView);
+```
+
 ![intro](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/img_intro.png)
 
 `android:src` dùng để thiết lập hình ảnh hiển thị cho ImageView. Hình ảnh có thể là 1 bitmap, file hình ảnh, drawable.
