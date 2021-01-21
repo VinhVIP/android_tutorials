@@ -47,7 +47,7 @@ VD: LinearLayout chứa 4 Button, trong đó chỉ có 3 Button là thiết lậ
 
 ![3-1](https://github.com/VinhVIP/android_tutorials/blob/main/LinearLayout/layout_weight.png)
 
-Nhận xét:
+***Nhận xét:***
 - View con không gán trọng số thì kích thước sẽ được giữ nguyên
 - Các View con còn lại sẽ chia nhau phần không gian dư thừa. Nếu gọi phần không gian còn dư thừa là `size`, tổng các trọng số là `SUM` thì View con có trọng số `weight` sẽ có kích thước là `weight/SUM * size`
 

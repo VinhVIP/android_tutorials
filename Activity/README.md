@@ -244,7 +244,7 @@ protected void onSaveInstanceState(@NonNull Bundle outState) {
 
 `Bundle outState` cho phép lưu dữ liệu theo cặp tên / giá trị bằng các phương thức như: **putInt(), putString(), putFloat(), putIntArray(),...**
 
-***Phục hồi lại trạng thái tại onCreate***
+***Phục hồi lại trạng thái tại onCreate()***
 
 Khi vòng đời mới của Activity diễn ra, các giá trị ta lưu ở `onSaveInstanceState` sẽ quay trở lại với hình thức là tham số `Bundle savedInstanceState` của phương thức `onCreate`. Do đó, ta chỉ cần đọc và phục hồi lại trạng thái của counter.
 
