@@ -285,7 +285,7 @@ Khi vòng đời mới của Activity diễn ra, các giá trị ta lưu ở `on
     }
 ```
 
-***Phục hồi lại trạng thái tại onRestoreInstanceState***
+***Phục hồi lại trạng thái tại onRestoreInstanceState()***
 
 Mỗi khi onCreate được chạy, nếu có trạng thái được lưu thì sau khi gọi onCreate, Activity sẽ tự động gọi phương thức `onRestoreInstanceState(Bundle savedInstanceState)` . Ta cũng có thể Override phương thức này để phục hồi dữ liệu.
 
