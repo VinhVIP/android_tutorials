@@ -9,7 +9,7 @@ Activity là 1 trong 4 thành phần quan trọng của ứng dụng Android g�
 
 ## Vòng đời của Activity
 
-![Activity lifecycle]()
+![Activity lifecycle](https://github.com/VinhVIP/android_tutorials/blob/main/Activity/lifecycle.png)
 
 Vòng đời của Activity trải qua nhiều giai đoạn, nhưng để Activity có thể hoạt động thì tối thiểu ta cần override phương thức `onCreate()` , phương thức này được gọi ở giai đoạn đầu tiên của chu kì vòng đời Activity, vì thế ta sẽ nạp giao diện cho nó bằng phương thức `setContentView()`
 
@@ -87,13 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
 - `findViewById(R.id.text_view)` : lệnh này dùng để lấy đối tượng theo resource id truyền vào
 
-![intro]()
+![intro](https://github.com/VinhVIP/android_tutorials/blob/main/Activity/intro.png)
 
 ## Cấu hình Activity trong AndroidManifest.xml
 
 Để có thể sử dụng 1 Activity thì ta cần phải khai báo nó trong `AndroidManifest.xml`
 
-![manifest]()
+![manifest](https://github.com/VinhVIP/android_tutorials/blob/main/Activity/manifest_path.png)
 
 ```xml
 <activity
@@ -218,11 +218,11 @@ public class MainActivity extends AppCompatActivity {
 
 Run app và nhấn button `+` lên vài lần
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/Activity/activity_1.png)
 
 Sau đó, ta thử xoay màn hình
 
-![]()
+![](https://github.com/VinhVIP/android_tutorials/blob/main/Activity/activity_2.png)
 
 Giá trị counter bị reset về 0, có nghĩa là sau khi ta xoay màn hình thì Activity đã bị hủy (onDestroy()) và sau đó được khởi chạy lại (onCreate()). Điều này khiến cho những dữ liệu của trạng thái trước khi xoay màn hình bị mất đi.
 
