@@ -6,9 +6,9 @@ CompoundButton là 1 lớp abstract mở rộng từ Button, từ lớp này nó
 
 Các View này có thêm 2 trạng thái là `checked` và `unchecked`
 
-![checked]()
+![checked](https://github.com/VinhVIP/android_tutorials/blob/main/CheckBox/cb_checked.png)
 
-![unchecked]()
+![unchecked](https://github.com/VinhVIP/android_tutorials/blob/main/CheckBox/cb_default.png)
 
 Một số thuộc tính chung:
 
@@ -32,7 +32,7 @@ VD:
 	android:text="ITMC" />
 ```
 
-![tint]()
+![tint](https://github.com/VinhVIP/android_tutorials/blob/main/CheckBox/cb_tint.png)
 
 *Trong Java*
 
@@ -52,7 +52,7 @@ checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
  });
 ```
 
-![checked change]()
+![checked change](https://github.com/VinhVIP/android_tutorials/blob/main/CheckBox/cb_listener.png)
 
 ## ToggleButton, Switch, RadioButton
 
@@ -108,4 +108,4 @@ checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
 </LinearLayout>
 ```
 
-![tổng họp]()
+![tổng họp](https://github.com/VinhVIP/android_tutorials/blob/main/CheckBox/all.png)

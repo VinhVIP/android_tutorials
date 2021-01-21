@@ -2,6 +2,8 @@
 
 RelativeLayout là layout mà các View con được định vị dựa vào mối liên hệ giữa các View con với nhau, hoặc giữa View con và layout cha.
 
+Nếu View con không được định vị thì mặc định nó sẽ xuất hiện ở góc phía trên, bên trái màn hình.
+
 ## Định vị View con bằng liên hệ với View cha RelativeLayout
 
 Các View con nằm bên trong RelativeLayout có thể được định vị bằng cách thiết lập các mối liên hệ với View cha như sau:
@@ -15,10 +17,44 @@ Các View con nằm bên trong RelativeLayout có thể được định vị b�
 VD: 
 
 ```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Button 2" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Button 3" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Button 4" />
+
+</RelativeLayout>
 ```
 
-![]()
+![parent](https://github.com/VinhVIP/android_tutorials/blob/main/RelativeLayout/parent.png)
 
 ## Định vị các View con bằng liên hệ giữa chúng với nhau
 
@@ -45,7 +81,41 @@ View con có thể thiết lập vị trí tương đối với nhau thông qua 
 VD: 
 
 ```xml
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn1"
+        android:text="Button 2" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn2"
+        android:text="Button 3" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn3"
+        android:layout_alignRight="@id/btn2"
+        android:text="Button 4" />
+
+</RelativeLayout>
 ```
 
-![]()
+![children](https://github.com/VinhVIP/android_tutorials/blob/main/RelativeLayout/child.png)

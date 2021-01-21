@@ -12,4 +12,29 @@ Các giá trị có thể kết hợp với nhau thông qua toán tử `|`
 
 VD: 
 
-![]()
+```xml
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/river" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8BC34A"
+        android:text="Xem thêm" />
+
+</FrameLayout>
+```
+
+![frame_river](https://github.com/VinhVIP/android_tutorials/blob/main/FrameLayout/river.png)
