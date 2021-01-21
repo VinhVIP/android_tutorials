@@ -43,8 +43,6 @@ Các View con trong LinearLayout có thể gán cho một giá trị trọng s�
 
 Giá trị trọng số sẽ được LinearLayout sử dụng để điều chỉnh kích thước View con, nếu set orientation là `vertical` thì sẽ điều chỉnh chiều cao của View, `horizontal` thì sẽ điều chỉnh chiều rộng của View.
 
-![3 button có trọng số]()
-
 VD: LinearLayout chứa 4 Button, trong đó chỉ có 3 Button là thiết lập trọng số
 
 ![3-1](https://github.com/VinhVIP/android_tutorials/blob/main/LinearLayout/layout_weight.png)
