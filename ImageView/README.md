@@ -107,4 +107,4 @@ VD: ImageView có kích thước **150x150**, ta thiết lập thuộc tính `ap
 </LinearLayout>
 ```
 
-![lisa]()
+![lisa](https://github.com/VinhVIP/android_tutorials/blob/main/ImageView/img_circle.png)
