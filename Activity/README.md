@@ -249,8 +249,8 @@ protected void onSaveInstanceState(@NonNull Bundle outState) {
 Khi vòng đời mới của Activity diễn ra, các giá trị ta lưu ở `onSaveInstanceState` sẽ quay trở lại với hình thức là tham số `Bundle savedInstanceState` của phương thức `onCreate`. Do đó, ta chỉ cần đọc và phục hồi lại trạng thái của counter.
 
 ```java
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
