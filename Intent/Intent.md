@@ -6,7 +6,7 @@ Intent là thành phần quan trọng của Android, cho phép các thành phầ
 
 Intent trong Android chia làm 2 loại: Intent tường minh (explicit) và Intent không tường minh (implicit)
 
-## Intent tường minh
+## 1, Intent tường minh
 
 Là những Intent chỉ định rõ ràng tên của các thành phần mục tiêu để nó xử lý.
 
@@ -521,3 +521,102 @@ public void onBackPressed() {
 }
 ```
 
+
+## 2, Intent không tường minh
+
+Intent không tường minh là những Intent không chỉ định rõ thành phần mục tiêu, nhưng bao gồm đầy đủ thông tin cho hệ thống để xác định các thành phần có sẵn là tốt nhất để chạy mục đích đó.
+
+Ví dụ mở 1 đường link tới 1 trang web nào đó, Android sẽ quyết định sẽ mở ứng dụng nào (vd Chrome, FireFox,...) để thực thi yêu cầu đặt ra.
+
+**VD:** Tạo 1 ứng dụng có 2 Button để mở một URL và gửi email.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnOpenURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google.com" />
+
+    <Button
+        android:id="@+id/btnSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gửi Email" />
+
+</LinearLayout>
+```
+
+```java
+package com.vinh.itmcandroidcourse;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnURL = findViewById(R.id.btnOpenURL);
+        Button btnEmail = findViewById(R.id.btnSendEmail);
+
+        btnURL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openURL("https://google.com");
+            }
+        });
+
+        btnEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendEmail();
+            }
+        });
+    }
+
+    private void openURL(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+    private void sendEmail() {
+        Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
+
+        String subject = "ITMC";    // Tiêu đề của mail
+        String content = "Hello mọi người!!";   // Nội dung của mail
+
+        // Thiết lập địa chỉ nhận
+        intent.putExtra(Intent.EXTRA_EMAIL, "clb.itmc@student.ptithcm.edu.vn");
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, content);
+
+        // Kiểm tra xem có thành phần nào có thể đáp ứng mục tiêu gửi mail hay không
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Không có ứng dụng nào phù hợp", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+}
+```
