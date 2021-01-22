@@ -152,9 +152,13 @@ public class SecondActivity extends AppCompatActivity {
 }
 ```
 
-![MainActivity]()
+*Giao diện MainActivity*
 
-![SecondActivity]()
+![MainActivity](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_edtext.png)
+
+*Giao diện SecondActivity*
+
+![SecondActivity](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/second_tv.png)
 
 
 Thông qua ví dụ ta có thể thấy, muốn mở 1 Activity mới, ta chỉ cần tạo 1 Intent, chỉ ra thành phần mục tiêu là tên Activity muốn đi đến, sau đó sử dụng phương thức `startActivity(intent);`
@@ -468,23 +472,23 @@ Ta tiến hành kiểm tra kết quả.
 
 Mở app lên, tăng giá trị Counter lên 5
 
-![counter 5]()
+![counter 5](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_count.png)
 
 Sau đó nhấn button `Gửi`
 
-![second]()
+![second](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_count_second.png)
 
 ***Trường hợp 1:*** Nhấn button `+5`
 
-![btn+5]()
+![btn+5](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_res.png)
 
 ***Trường hợp 2:*** Nhấn button `Cancel`
 
-![cancel]()
+![cancel](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_count.png)
 
 ***Trường hợp 3:*** Nhấn nút Back
 
-![back]()
+![back](https://github.com/VinhVIP/android_tutorials/blob/main/Intent/main_count.png)
 
 **Nhận xét:**
 
