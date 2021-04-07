@@ -1,6 +1,6 @@
 # Service trong Android
 
-Service là 1 trong 4 thành phần của ứng dụng Android, có thể thực hiện các tác vụ cần nhiều thời gian, và không hề có giao diện người dùng.
+Service là 1 trong 4 thành phần của ứng dụng Android, có thể thực hiện các hoạt động dài dưới background. Service không có giao diện người dùng (UI). Sau khi bắt đầu, Service có thể tiếp tục chạy trong 1 thời gian, ngay cả sau khi người dùng chuyển sang ứng dụng khác hoặc tắt app.   
 
 ## Tại sao phải tạo ra Service
 
@@ -16,7 +16,7 @@ Về bản chất, Service vẫn chạy trên main thread của ứng dụng (m�
 
 # 2. Các loại Service 
 
-## 2.1 Unbound Service (không ràng buộc)
+## 2.1 Unbound Service - Started Service (không ràng buộc)
 
 Một Activity có thể khởi chạy service bằng `startService()` và không quan tâm Service đó chạy như thế nào, bao giờ thì kết thúc ngay cả khi Activity đã bị destro
 
@@ -51,7 +51,7 @@ Khi hệ thống thiếu hụt bộ nhớ thì Background Service dễ bị kill
 
 `startService() -> onCreate() -> onStartCommand() -> (Service đang chạy) -> onDestroy() -> (Service dừng)`
 
-- Nếu Service đã được tạo thì sẽ gọi trực tiếp tới `onStartCommand()` luông (bỏ qua `onCreate())` , do đó dù start bao nhiêu lần thì cũng chỉ có duy nhất 1 instance của Service được tạo ra.
+- Nếu Service đã được tạo thì sẽ gọi trực tiếp tới `onStartCommand()` luôn (bỏ qua `onCreate())` , do đó dù start bao nhiêu lần thì cũng chỉ có duy nhất 1 instance của Service được tạo ra.
 
 - Phương thức `onStartCommand()` trả về một giá trị int:
 

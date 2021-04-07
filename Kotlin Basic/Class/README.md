@@ -60,13 +60,19 @@ Cũng giống như các thuộc tính thông thường, các thuộc tính đư�
 
 Các secondary constructors được định nghĩa bên trong thân class và bắt đầu bằng từ khóa `construtor`
 
-`Secondary Constructors` bắt buộc phải gọi lại `Primary Constructor` bằng cách dùng từ khóa `this` và truyền các tham số thích hợp:
+Nếu 1 class có `Primary Constructor` thì mỗi `Secondary Constructors` bắt buộc phải ủy quyền cho `Primary Constructors` trực tiếp hoặc gián tiếp thông qua `Secondary Constructor` khác bằng cách dùng từ khóa `this` và truyền các tham số thích hợp:
 
 ```Kotlin
 class Person(val name: String) {
-    var children: MutableList<Person> = mutableListOf()
-    constructor(name: String, parent: Person) : this(name) {
-        parent.children.add(this)
+    init {
+        println("This line print before secondary constructor run")
+    }
+    constructor(name: String, age: Int) : this(name) {
+        println("This is secondary constructor 1")
+    }
+
+    constructor(name: String, age: Int, phone: String) : this(name, age) {
+        println("This is secondary constructor 2")
     }
 }
 ```
@@ -79,3 +85,23 @@ class Person(val name: String) {
 ```Kotlin
 class DontCreateMe private constructor () { /*...*/ }
 ```
+
+## 2. Tạo các instance của class
+
+Để tạo 1 instance của 1 class, ta gọi hàm constructor của class như 1 hàm thông thường:
+
+```Kotlin
+val invoice = Invoice()
+
+val customer = Customer("Joe Smith")
+```
+
+## 3. Các thành phần bên trong 1 class
+
+Class có thể chứa các thành phần:
+
+- Các Constructor và khối khởi tạo.
+- Các thuộc tính (Properties)
+- Các hàm (Functions)
+- Nested và inner classes
+- Đối tượng
