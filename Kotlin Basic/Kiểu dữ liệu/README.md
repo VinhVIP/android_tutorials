@@ -1,6 +1,6 @@
 # Kotlin
 
-## 1. Kiểu dữ liệu
+## 1. Kiểu số
 
 Trong Kotlin, mọi thứ đều là một *đối tượng* (object)
 
@@ -56,76 +56,13 @@ fun main() {
 }
 ```
 
-### 1.3 Các kiểu dữ liệu khác
 
-#### 1.3.1 Boolean 
+### 1.3 Một số kiểu giá trị khác
 
-Kiểu Boolean chỉ có 2 giá trị *true/false*
+Một số giá trị được ngầm hiểu để gán cho các biến như:
 
-Kiểu Boolean? còn có thể giá trị *null*
-
-```Kotlin
-val myTrue: Boolean = true
-val myFalse: Boolean = false
-val boolNull: Boolean? = null
-
-println(myTrue || myFalse)	// TRUE
-println(myTrue && myFalse)	// FALSE
-println(!myTrue)			// FALSE
-```
-
-#### 1.3.2 Char 
-
-Char là kiểu kí tự, được biểu diễn trong cặp dấu nháy đơn `''`
-
-```Kotlin
-val aChar: Char = 'a'
-```
-
-#### 1.3.3 String
-
-String là kiểu chuỗi kí tự, được biểu diễn trong cặp dấu nháy kép `""`
-
-```Kotlin
-val str = "abcd 123"
-```
-
-Để duyệt qua các kí tự của String, ta có thể dùng vòng lặp for:
-
-```Kotlin
-for (c in str) {
-    println(c)
-}
-```
-
-Để nối chuỗi, ta có thể sử dụng toán tử `+`, miễn là phần tử đầu tiên trong biểu thức là 1 chuỗi
-
-```Kotlin
-val s = "abc" + 1
-println(s + "def")	//abc1def
-```
-
-**Viết chuỗi trên nhiều dòng:**
-
-```Kotlin
-val text = """
-    |Tell me and I forget.
-    |Teach me and I remember.
-    |Involve me and I learn.
-    |(Benjamin Franklin)
-    """
-```
-
-**String templates:**
-
-```Kotlin
-val i = 10
-println("i = $i") // prints "i = 10"
-```
-
-### 1.3.2 Kiểu số đặc biệt
-
-Một số giá trị được ngầm hiểu để gán cho các biến như *Hexadecimals*, *Binaries*,...
+- *Hexadecimals*: `0xFF`
+- *Binaries*: `0b110000`
 
 Ta có thể sử dụng dấu gạch dưới để các giá trị dễ đọc hơn.
 
@@ -137,19 +74,19 @@ val hexBytes = 0xFF_EC_DE_5E
 val bytes = 0b11010010_01101001_10010100_10010010
 ```
 
-## 2. Ép kiểu dữ liệu
+### 1.4. Ép kiểu dữ liệu
 
-### 2.1 Ép kiểu ngầm định
+**Ép kiểu ngầm định**
 
 Kiểu dữ liệu có kích thước nhỏ sẽ được ép kiểu ngầm định khi chuyển sang kiểu dữ liệu có kích thước lớn hơn.
 
-Kotlin ép kiểu dữ liệu là tường minh
+
 ```Kotlin
 val a: Int? = 1 // A boxed Int (java.lang.Integer)
 val b: Long? = a
 ```
 
-### 2.2 Ép kiểu tường minh
+**Ép kiểu tường minh**
 
 ```Kotlin
 val b: Byte = 1 // OK
@@ -173,9 +110,7 @@ Trong nhiều trường hợp, không cần chuyển đổi kiểu rõ ràng vì
 val l = 1L + 3 // Long + Int => Long
 ```
 
-## 3. Một số vấn đề khác liên quan đến kiểu số
-
-### 3.1 Phép chia số nguyên
+### 1.5 Phép chia số nguyên
 
 Phép chia giữa các số nguyên luôn trả về 1 số nguyên, phần thập phân sẽ tự động bị loại bỏ.
 
@@ -192,11 +127,11 @@ val x = 5 / 2.toDouble()
 println(x == 2.5) // TRUE
 ```
 
-### 3.2 Phép thao tác bit (bitwise)
+### 1.6 Phép thao tác bit (bitwise)
 
 Kotlin cung cấp các phép toán bit trên các số nguyên.
 
-**Lưu ý:** Chỉ áp dụng cho kiểu *Int* và *Long*
+**Lưu ý:** Chỉ áp dụng cho kiểu `Int` và `Long`
 
 - shl(bits) – signed shift left
 
@@ -212,7 +147,11 @@ Kotlin cung cấp các phép toán bit trên các số nguyên.
 
 - inv() – bitwise inversion
 
-### 3.3 Số nguyên không dấu
+```Kotlin
+val x = (1 shl 2) and 0x000FF000
+```
+
+### 1.7 Số nguyên không dấu
 
 Kể từ Kotlin 1.3 , kiểu số Unsigned được hỗ trợ
 
@@ -237,3 +176,69 @@ val l: ULong = 1u  // ULong, expected type provided
 ```Kotlin
 val a = 1UL // ULong
 ```
+
+## 2 Boolean 
+
+Kiểu `Boolean` chỉ có 2 giá trị *true/false*
+
+Kiểu `Boolean?` còn có thể giá trị *null*
+
+```Kotlin
+val myTrue: Boolean = true
+val myFalse: Boolean = false
+val boolNull: Boolean? = null
+
+println(myTrue || myFalse)  // TRUE
+println(myTrue && myFalse)  // FALSE
+println(!myTrue)            // FALSE
+```
+
+## 3 Char 
+
+Char là kiểu kí tự, được biểu diễn trong cặp dấu nháy đơn `''`
+
+```Kotlin
+val aChar: Char = 'a'
+```
+
+## 4 String
+
+String là kiểu chuỗi kí tự, được biểu diễn trong cặp dấu nháy kép `""`
+
+```Kotlin
+val str = "abcd 123"
+```
+
+Để duyệt qua các kí tự của String, ta có thể dùng vòng lặp for:
+
+```Kotlin
+for (c in str) {
+    println(c)
+}
+```
+
+Để nối chuỗi, ta có thể sử dụng toán tử `+`, miễn là phần tử đầu tiên trong biểu thức là 1 chuỗi
+
+```Kotlin
+val s = "abc" + 1
+println(s + "def")  //abc1def
+```
+
+**Viết chuỗi trên nhiều dòng:**
+
+```Kotlin
+val text = """
+    |Tell me and I forget.
+    |Teach me and I remember.
+    |Involve me and I learn.
+    |(Benjamin Franklin)
+    """
+```
+
+**String templates:**
+
+```Kotlin
+val i = 10
+println("i = $i") // prints "i = 10"
+```
+## 5. Arrays
