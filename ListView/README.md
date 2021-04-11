@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-![demo-arrayadapter](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/arrayadapter.png)
+![demo-arrayadapter](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/array_adapter.png)
 
 ## 2.2 Các layout dựng sẵn để làm việc với ArrayAdapter
 
