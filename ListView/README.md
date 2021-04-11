@@ -361,4 +361,6 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+**Kết quả:**
+
 ![done](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/done.png)
