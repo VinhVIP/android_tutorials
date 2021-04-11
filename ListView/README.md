@@ -25,11 +25,11 @@ Adapter có thể hiểu là một cầu nối giữa các View và các dữ li
 
 Có nhiều View cần tới AdapterView để quản lý dữ liệu hiển thị, các View này là con của lớp AdapterView.
 
-[adapterview](https://s1.o7planning.com/vi/10435/images/1304039.png)
+![adapterview](https://s1.o7planning.com/vi/10435/images/1304039.png)
 
 **Android Adapter**
 
-[android adapter](https://s1.o7planning.com/vi/10435/images/1304404.png)
+![android adapter](https://s1.o7planning.com/vi/10435/images/1304404.png)
 
 ## 2. ListView cơ bản sử dụng ArrayAdapter
 
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
-[demo-arrayadapter]()
+![demo-arrayadapter](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/arrayadapter.png)
 
 ## 2.2 Các layout dựng sẵn để làm việc với ArrayAdapter
 
@@ -118,15 +118,17 @@ val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_check
 listView.adapter = adapter
 ```
 
-[checkedtv]()
+![checkedtv](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/checkedtv.png)
 
 ## 3. Custom ListView
 
 Mục tiêu là chúng ta sẽ tạo 1 ListView có giao diện như hình:
 
-[target]()
+![app](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/app.png)
 
 ## 3.1 Thiết kế giao diện cho ListItem 
+
+![row](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/row.jpg)
 
 *res/layout/row_item.xml*
 
@@ -359,4 +361,4 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-[done]()
+![done](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/done.png)
