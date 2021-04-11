@@ -16,9 +16,9 @@ ListItem có giao diện, được tạo từ những View cơ bản.
 
 Adapter có thể hiểu là một cầu nối giữa các View và các dữ liệu cơ bản của View đó. Tức Adapter quản lý các dữ liệu và ghép nối chúng với các ListItem riêng lẻ của ListView.
 
-[adapter](https://s1.o7planning.com/vi/10435/images/1303918.png)
+![adapter](https://s1.o7planning.com/vi/10435/images/1303918.png)
 
-[adapter](https://s1.o7planning.com/vi/10435/images/1304328.png)
+![adapter](https://s1.o7planning.com/vi/10435/images/1304328.png)
 
 
 **AdapterView**
