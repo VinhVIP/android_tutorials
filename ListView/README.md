@@ -1,6 +1,6 @@
 # ListView trong Android
 
-## 1. ListView là gì?
+# 1. ListView là gì?
 
 ListView là một ViewGroup, hiển thị các thành phần theo 1 danh sách, có thể cuộn theo chiều dọc.
 
@@ -31,7 +31,7 @@ Có nhiều View cần tới AdapterView để quản lý dữ liệu hiển th�
 
 ![android adapter](https://s1.o7planning.com/vi/10435/images/1304404.png)
 
-## 2. ListView cơ bản sử dụng ArrayAdapter
+# 2. ListView cơ bản sử dụng ArrayAdapter
 
 ## 2.1 ArrayAdapter
 
@@ -120,7 +120,7 @@ listView.adapter = adapter
 
 ![checkedtv](https://github.com/VinhVIP/android_tutorials/blob/main/ListView/checkedtv.png)
 
-## 3. Custom ListView
+# 3. Custom ListView
 
 Mục tiêu là chúng ta sẽ tạo 1 ListView có giao diện như hình:
 
