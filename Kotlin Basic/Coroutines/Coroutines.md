@@ -26,7 +26,7 @@ Nếu Coroutine là cooperative thì `job.cancel()` sẽ được thực hiện,
 
 VD: `delay(), yield(), withContext(), withTimeout(),...`
 
-```java
+```kotlin
 fun main() = runBlocking{
 	val job: Job = launch{
 		for(i in 0..500){
